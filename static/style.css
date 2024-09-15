@@ -1,0 +1,103 @@
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Card styling to create a sleek and modern appearance */
+.card {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Button styling for a consistent look across the application */
+.btn {
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff; /* White text on buttons */
+    background-color: #000; /* Black button background */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding for better appearance */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #333; /* Slightly lighter black on hover */
+}
+
+/* Additional styling for specific button types */
+.btn-primary {
+    background-color: #000; /* Black primary button */
+}
+
+.btn-secondary {
+    background-color: #000; /* Black secondary button */
+}
+
+.btn-danger {
+    background-color: #000; /* Black danger button */
+}
+
+/* Input field styling for better UX */
+input[type="text"],
+input[type="number"] {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Add a gap between form elements for readability */
+.form-control {
+    margin-bottom: 10px;
+}
+
+/* Improved layout for item entry fields */
+.item-entry {
+    display: flex;
+    align-items: center;
+}
+
+.item-entry input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.item-entry .remove-item {
+    padding: 0 12px;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Headings styling */
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+/* Additional global styling for links and text */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

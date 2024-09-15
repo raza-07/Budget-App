@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Item Expenses{% endblock %}
+{% block content %}
+<div class="card shadow p-4">
+    <h2 class="mb-4">Enter Item Expenses</h2>
+    <form action="/submit_expenses" method="post" id="expense-form">
+        <p class="fw-bold">Total Salaries: {{ total_salaries }}</p>
+        <div id="items-container">
+            <div class="item-entry mb-3 d-flex gap-2">
+                <input type="text" name="item[]" placeholder="Item Name" class="form-control" required>
+                <input type="number" name="price[]" placeholder="Price" class="form-control" min="0" required>
+                <button type="button" class="btn btn-danger remove-item">Remove</button>
+            </div>
+        </div>
+        <button type="button" class="btn btn-secondary mb-3" id="add-item">Add Item</button>
+        <button type="submit" class="btn btn-primary">Submit Expenses</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('add-item').addEventListener('click', function() {
+        const itemsContainer = document.getElementById('items-container');
+        const newItem = document.createElement('div');
+        newItem.classList.add('item-entry', 'mb-3', 'd-flex', 'gap-2');
+        newItem.innerHTML = `
+            <input type="text" name="item[]" placeholder="Item Name" class="form-control" required>
+            <input type="number" name="price[]" placeholder="Price" class="form-control" min="0" required>
+            <button type="button" class="btn btn-danger remove-item">Remove</button>
+        `;
+        itemsContainer.appendChild(newItem);
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('remove-item')) {
+            event.target.parentElement.remove();
+        }
+    });
+</script>
+{% endblock %}

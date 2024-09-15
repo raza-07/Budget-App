@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Results{% endblock %}
+{% block content %}
+<div class="card shadow p-4">
+    <h2 class="mb-4">Budget Summary</h2>
+    <p class="fw-bold">Total Salaries: {{ total_salaries }}</p>
+    <p class="fw-bold">Total Amount Spent on Items: {{ total_expenses }}</p>
+    <p class="fw-bold text-success">Remaining Amount: {{ remaining_amount }}</p>
+</div>
+{% endblock %}
